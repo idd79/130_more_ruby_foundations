@@ -1,0 +1,26 @@
+Fill out the rest of the Ruby code below so that output similar to
+"Sample Output" is sent to the terminal. To get such output, read
+some text from a file in process and pass that text to the block
+provided to each call. Note that everything you need to work on is
+either part of the process method or part of one of the 3 blocks. No
+other additions or changes are required. The text you use does not
+have to produce the same numbers as the sample output, but should
+have the indicated format.
+
+We want to invite you to contribute your unique solution or
+analysis. The goal here is to showcase the variety of ways in which
+this exercise can be solved, and the various tradeoffs one has to
+consider when working to a solution. Please do not submit redundant
+solutions, or solutions you haven't tested, or solutions that
+contain errors. It's not mandatory that you submit a solution. If
+you do, make sure it's a somewhat good solution that may be useful
+to others who are learning.
+
+Use the form below to add your solution or analysis for this
+exercise. You can include a link to a gist or pastebin, or write
+your entire solution right here. Make sure to use proper formatting
+so your code shows up correctly and preview your code first. You may
+include some commentary about your code and the tradeoffs you took,
+or some analysis about this exercise and its solutions. Make sure
+your solution fulfills all of the provided examples, if any, and
+doesn't contain any obvious errors.

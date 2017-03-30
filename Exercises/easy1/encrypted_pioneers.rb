@@ -43,4 +43,6 @@ names = ['Nqn Ybirynpr',
 'Unllvz Fybavzfxv',
 'Tregehqr Oynapu']
 
-puts names.map { |name| rot13(name) }
+# puts names.map { |name| rot13(name) }  # or,
+print_names = method(:rot13).to_proc
+puts names.map(&print_names)
