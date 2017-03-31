@@ -200,3 +200,41 @@ factorial.each_with_index do |number, index|
   break if index == 6
 end
 ```
+
+## Medium 2
+
+- Use `StringIO.new` to simulate `$stdio` or `$stderr`.
+- Read about the usage of `capture_io` when testing equal assertion and there is residual output printed to the screen.
+
+- Just like `setup` contains the code that is going to be executed before the test, we can use `teardown` to contain the code to be executed at the end of the test. Exaple:
+
+```ruby
+require 'minitest/autorun'
+require_relative 'text'
+
+class TextTest < Minitest::Test
+  def setup
+    @file = File.open('./sample_text.txt', 'r')
+  end
+
+  def test_swap
+    text = Text.new(@file.read)
+    actual_text = text.swap('a', 'e')
+    expected_text = <<~TEXT
+    Lorem ipsum dolor sit emet, consectetur edipiscing elit. Cres sed vulputete ipsum.
+    Suspendisse commodo sem ercu. Donec e nisi elit. Nullem eget nisi commodo, volutpet
+    quem e, viverre meuris. Nunc viverre sed messe e condimentum. Suspendisse ornere justo
+    nulle, sit emet mollis eros sollicitudin et. Etiem meximus molestie eros, sit emet dictum
+    dolor ornere bibendum. Morbi ut messe nec lorem tincidunt elementum vitee id megne. Cres
+    et verius meuris, et pheretre mi.
+    TEXT
+
+    assert_equal expected_text, actual_text
+  end
+
+  def teardown
+    @file.close
+  end
+end
+```
+
