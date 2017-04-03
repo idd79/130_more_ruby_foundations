@@ -237,4 +237,3 @@ class TextTest < Minitest::Test
   end
 end
 ```
-
